@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Rig Portal</title>
+    <title>Scout Rig Inc. | Modular Power Stations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -13,9 +13,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            blue: '#1F3A46',
-                            teal: '#208080',
-                            light: '#F8FAFC'
+                            blue: '#1F2121', // Dark Gray/Black
+                            teal: '#208080', // Primary Teal
+                            tealDark: '#1a6666',
+                            gold: '#FFB800',  // Accent Gold
+                            light: '#F5F5F1'  // Background Light
                         }
                     }
                 }
@@ -23,10 +25,22 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: #F5F5F1;
+            color: #1F2121;
+        }
+        .animate-slideUp {
+            animation: slideUp 0.4s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .bg-mesh {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 24px 24px;
         }
     </style>
 <script type="importmap">
@@ -41,7 +55,7 @@
 }
 </script>
 </head>
-<body>
+<body class="bg-mesh">
     <div id="root"></div>
 </body>
 </html>

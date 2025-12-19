@@ -7,6 +7,7 @@ import InvestorLanding from './pages/InvestorLanding';
 import CustomerLanding from './pages/CustomerLanding';
 import StrategicLanding from './pages/StrategicLanding';
 import DashboardPortal from './pages/DashboardPortal';
+import MarketingLanding from './pages/MarketingLanding';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route path="/marketing" element={<MarketingLanding />} />
           <Route path="/partners" element={<PartnerLanding />} />
           <Route path="/investors" element={<InvestorLanding />} />
           <Route path="/customers" element={<CustomerLanding />} />

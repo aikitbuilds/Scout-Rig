@@ -7,8 +7,9 @@ export enum StakeholderRole {
   ADMIN = 'Executive/Founder'
 }
 
-export interface RigData {
+export interface StationData {
   id: string;
+  model: 'Scout Station 100' | 'Scout Station 200' | 'Scout Station 300';
   customer: string;
   location: string;
   status: 'Operational' | 'In transit' | 'Maintenance' | 'Planned';
@@ -16,6 +17,7 @@ export interface RigData {
   revenue: number;
   uptime: number;
   nextPayment: string;
+  compassStatus: 'Active' | 'Optimizing' | 'Standby';
 }
 
 export interface CalculatorState {
